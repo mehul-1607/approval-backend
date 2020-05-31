@@ -1,0 +1,22 @@
+h1 {
+	font-size: 3rem;
+	text-align: center;
+	padding-top: 2rem;
+	letter-spacing: 0.5rem;
+	font-weight: bold;
+}
+main {
+	background-image: url(main.jpeg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+footer {
+	background-color: black;
+	padding: 2rem;
+}
+.footer {
+	color: white;
+	font-size: 2rem;
+}
