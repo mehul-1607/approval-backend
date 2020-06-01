@@ -26,6 +26,10 @@ app.get('/',(req,res)=>{
     
     
 });
+app.post('/create',(req,res)=>{
+    app.set('name',req.body.Bd);
+    app.set('email',req.body.Du);
+});
 app.post('/',(req,res)=>{
    const person=new login();
    person.email=req.body.email;
