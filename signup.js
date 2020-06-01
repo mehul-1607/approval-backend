@@ -5,6 +5,17 @@ const signup=require('./model/signup.model');
 const path = require("path");
 const bodyParser=require("body-parser");
 
+
+
+
+router.use(require("express-session")({
+    secret: "Once again Rusty wins cutest dog!",
+    resave: false,
+    saveUninitialized: false
+}));
+
+
+
 router.get('/',(req,res)=>{
    
    res.sendfile(`${__dirname}/view/approval-front/signup.html`)

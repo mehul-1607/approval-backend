@@ -33,6 +33,7 @@ router.post('/', function(req, res, next) {
           if (!user) {
            // req.flash('error', 'No account with that email address exists.');
             return res.redirect('/forgot');
+            console.log("User doesnot exist");
           }
   
           user.resetPasswordToken = token;
@@ -60,8 +61,10 @@ router.post('/', function(req, res, next) {
             'http://' + req.headers.host + '/reset/' + token + '\n\n' +
             'If you did not request this, please ignore this email and your password will remain unchanged.\n'
         };
+       
         smtpTransport.sendMail(mailOptions, function(err) {
          // req.flash('info', 'An e-mail has been sent to ' + user.email + ' with further instructions.');
+         console.log("Email has been sent");
           done(err, 'done');
         });
       }
@@ -71,4 +74,7 @@ router.post('/', function(req, res, next) {
     });
   });
 
+
+
   module.exports=router;
+  
